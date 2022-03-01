@@ -1,0 +1,692 @@
+{
+  "unpublishedPage": {
+    "name": "Conversations",
+    "slug": "conversations",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1280,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 890,
+          "containerStyle": "none",
+          "snapRows": 104,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 30,
+          "minHeight": 830,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "Table1",
+              "columnOrder": [
+                "id",
+                "Notes",
+                "Date",
+                "Author",
+                "rowIndex",
+                "FilesURL"
+              ],
+              "dynamicPropertyPathList": [],
+              "isVisibleDownload": true,
+              "topRow": 23,
+              "bottomRow": 87,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "parentColumnSpace": 77.5,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Notes.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Date.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Author.computedValue"
+                },
+                {
+                  "key": "primaryColumns.rowIndex.computedValue"
+                },
+                {
+                  "key": "primaryColumns.FilesURL.computedValue"
+                }
+              ],
+              "leftColumn": 3,
+              "primaryColumns": {
+                "Author": {
+                  "isDerived": false,
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Author))}}",
+                  "textSize": "PARAGRAPH",
+                  "index": 3,
+                  "isVisible": true,
+                  "label": "Author",
+                  "columnType": "text",
+                  "horizontalAlignment": "LEFT",
+                  "width": 150,
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "id": "Author",
+                  "verticalAlignment": "CENTER"
+                },
+                "rowIndex": {
+                  "isDerived": false,
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.rowIndex))}}",
+                  "textSize": "PARAGRAPH",
+                  "index": 4,
+                  "isVisible": false,
+                  "label": "rowIndex",
+                  "columnType": "text",
+                  "horizontalAlignment": "LEFT",
+                  "width": 150,
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "id": "rowIndex",
+                  "verticalAlignment": "CENTER"
+                },
+                "id": {
+                  "isDerived": false,
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "textSize": "PARAGRAPH",
+                  "index": 0,
+                  "isVisible": true,
+                  "label": "id",
+                  "columnType": "text",
+                  "horizontalAlignment": "LEFT",
+                  "width": 150,
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "id": "id",
+                  "verticalAlignment": "CENTER"
+                },
+                "Notes": {
+                  "isDerived": false,
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Notes))}}",
+                  "textSize": "PARAGRAPH",
+                  "index": 1,
+                  "isVisible": true,
+                  "label": "Notes",
+                  "columnType": "text",
+                  "horizontalAlignment": "LEFT",
+                  "width": 150,
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "id": "Notes",
+                  "verticalAlignment": "CENTER"
+                },
+                "Date": {
+                  "isDerived": false,
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Date))}}",
+                  "textSize": "PARAGRAPH",
+                  "index": 2,
+                  "isVisible": true,
+                  "label": "Date",
+                  "columnType": "text",
+                  "horizontalAlignment": "LEFT",
+                  "width": 150,
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "id": "Date",
+                  "verticalAlignment": "CENTER"
+                },
+                "FilesURL": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "FilesURL",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "FilesURL",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.FilesURL))}}"
+                }
+              },
+              "derivedColumns": {},
+              "rightColumn": 40,
+              "textSize": "PARAGRAPH",
+              "widgetId": "3yumoh5rjs",
+              "isVisibleFilters": true,
+              "tableData": "{{getConversationDetails.data.filter((note)=>note.id === appsmith.URL.queryParams.id)}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "isVisibleCompactMode": true,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 347,
+                "step": 62,
+                "Notes": 263,
+                "status": 75,
+                "id": 64,
+                "Date": 112
+              }
+            },
+            {
+              "backgroundColor": "#FFFFFF",
+              "widgetName": "Container1",
+              "rightColumn": 40,
+              "widgetId": "twzr664jgc",
+              "containerStyle": "card",
+              "topRow": 0,
+              "bottomRow": 18,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "CONTAINER_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "shouldScrollContents": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "rightColumn": 634,
+                  "detachFromLayout": true,
+                  "widgetId": "yfmqjhn5e1",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 280,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "twzr664jgc",
+                  "minHeight": 180,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "widgetName": "Text7",
+                      "rightColumn": 28,
+                      "textAlign": "LEFT",
+                      "widgetId": "86a6r18gbh",
+                      "topRow": 12,
+                      "bottomRow": 16,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "yfmqjhn5e1",
+                      "isLoading": false,
+                      "parentColumnSpace": 77.5,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Interest Level: {{fetchInvestorDetails.data[0][\"Interest Levels\"]}}"
+                    },
+                    {
+                      "widgetName": "Text4",
+                      "rightColumn": 28,
+                      "textAlign": "LEFT",
+                      "widgetId": "jck3t7pdv5",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "shouldScroll": false,
+                      "parentId": "yfmqjhn5e1",
+                      "isLoading": false,
+                      "parentColumnSpace": 77.5,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Location: {{fetchInvestorDetails.data[0].Location}}"
+                    },
+                    {
+                      "widgetName": "Text1",
+                      "rightColumn": 28,
+                      "textAlign": "LEFT",
+                      "widgetId": "87i13ooopb",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "yfmqjhn5e1",
+                      "isLoading": false,
+                      "parentColumnSpace": 77.5,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Name: {{fetchInvestorDetails.data[0]['Investment Fund']}}"
+                    },
+                    {
+                      "widgetName": "Text2",
+                      "rightColumn": 41,
+                      "textAlign": "LEFT",
+                      "widgetId": "m1jb4lcdtq",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "yfmqjhn5e1",
+                      "isLoading": false,
+                      "parentColumnSpace": 77.5,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "HEADING1",
+                      "text": "Investor Information"
+                    },
+                    {
+                      "widgetName": "Text13",
+                      "rightColumn": 64,
+                      "textAlign": "LEFT",
+                      "widgetId": "sg8y1n85n1",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "yfmqjhn5e1",
+                      "isLoading": false,
+                      "parentColumnSpace": 14.546875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Designation: {{fetchInvestorDetails.data[0]['Designation']}}"
+                    },
+                    {
+                      "widgetName": "Text14",
+                      "rightColumn": 64,
+                      "textAlign": "LEFT",
+                      "widgetId": "ktekme3gmv",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "yfmqjhn5e1",
+                      "isLoading": false,
+                      "parentColumnSpace": 14.546875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Fund: {{fetchInvestorDetails.data[0][\"Size of Fund\"]}}"
+                    },
+                    {
+                      "widgetName": "Text15",
+                      "rightColumn": 64,
+                      "textAlign": "LEFT",
+                      "widgetId": "z948xvx6kx",
+                      "topRow": 12,
+                      "bottomRow": 16,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "yfmqjhn5e1",
+                      "isLoading": false,
+                      "parentColumnSpace": 14.546875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Website: {{fetchInvestorDetails.data[0].Website}}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "widgetName": "Text10",
+              "rightColumn": 19,
+              "textAlign": "LEFT",
+              "widgetId": "jzoczhz0bz",
+              "topRow": 19,
+              "bottomRow": 23,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "type": "TEXT_WIDGET",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [],
+              "fontSize": "HEADING2",
+              "text": "Conversation Notes"
+            },
+            {
+              "backgroundColor": "#FFFFFF",
+              "widgetName": "Container2",
+              "rightColumn": 64,
+              "widgetId": "ot2clkn3s4",
+              "containerStyle": "card",
+              "topRow": 24,
+              "bottomRow": 62,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "CONTAINER_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 19.8125,
+              "leftColumn": 40,
+              "children": [
+                {
+                  "widgetName": "Canvas2",
+                  "rightColumn": 634,
+                  "detachFromLayout": true,
+                  "widgetId": "qew9r5t56r",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 400,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "ot2clkn3s4",
+                  "minHeight": 380,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "widgetName": "addConv",
+                      "rightColumn": 63,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "yxcc6ko5m9",
+                      "topRow": 4,
+                      "bottomRow": 25,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "RICH_TEXT_EDITOR_WIDGET",
+                      "version": 1,
+                      "parentId": "qew9r5t56r",
+                      "isLoading": false,
+                      "parentColumnSpace": 77.5,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "defaultText": "",
+                      "inputType": "html",
+                      "isDisabled": false
+                    },
+                    {
+                      "widgetName": "FilePicker1",
+                      "topRow": 25,
+                      "bottomRow": 29,
+                      "parentRowSpace": 40,
+                      "allowedFileTypes": [],
+                      "type": "FILE_PICKER_WIDGET",
+                      "parentColumnSpace": 77.5,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onFilesSelected"
+                        }
+                      ],
+                      "leftColumn": 17,
+                      "dynamicBindingPathList": [],
+                      "isDisabled": false,
+                      "onFilesSelected": "{{uploadFile.run()}}",
+                      "isRequired": false,
+                      "rightColumn": 63,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "2wg3o8bc3n",
+                      "isVisible": true,
+                      "label": "Select File",
+                      "maxFileSize": 5,
+                      "version": 1,
+                      "fileDataType": "Base64",
+                      "parentId": "qew9r5t56r",
+                      "isLoading": false,
+                      "files": [],
+                      "maxNumFiles": 1,
+                      "uploadedFileUrlPaths": ""
+                    },
+                    {
+                      "widgetName": "Button1",
+                      "rightColumn": 63,
+                      "onClick": "{{addNote.run(() => getConversationDetails.run(() => resetWidget('Container2', true)), () => {})}}",
+                      "isDefaultClickDisabled": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "widgetId": "t591xhk86g",
+                      "buttonStyle": "SECONDARY_BUTTON",
+                      "topRow": 32,
+                      "bottomRow": 36,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "BUTTON_WIDGET",
+                      "version": 1,
+                      "parentId": "qew9r5t56r",
+                      "isLoading": false,
+                      "parentColumnSpace": 77.5,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 44,
+                      "dynamicBindingPathList": [],
+                      "text": "Add Note",
+                      "isDisabled": false
+                    },
+                    {
+                      "widgetName": "Text11",
+                      "rightColumn": 17,
+                      "textAlign": "LEFT",
+                      "widgetId": "hh366820q0",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "qew9r5t56r",
+                      "isLoading": false,
+                      "parentColumnSpace": 7.1171875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "HEADING2",
+                      "text": "New Note"
+                    },
+                    {
+                      "widgetName": "Text12",
+                      "rightColumn": 17,
+                      "textAlign": "LEFT",
+                      "widgetId": "52uqe5eqsk",
+                      "topRow": 25,
+                      "bottomRow": 29,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "qew9r5t56r",
+                      "isLoading": false,
+                      "parentColumnSpace": 7.1171875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "HEADING3",
+                      "text": "Relevant File"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "image": "https://assets.appsmith.com/back_arrow.png",
+              "widgetName": "Image1",
+              "rightColumn": 3,
+              "onClick": "{{navigateTo('Investors', {})}}",
+              "objectFit": "contain",
+              "widgetId": "84e2dryh24",
+              "topRow": 0,
+              "bottomRow": 7,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "IMAGE_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "maxZoomLevel": 1,
+              "enableDownload": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "imageShape": "RECTANGLE",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "enableRotation": false,
+              "defaultImage": "https://source.unsplash.com/random/1500x600"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Conversations_fetchInvestorDetails",
+              "name": "fetchInvestorDetails",
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.id"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Conversations_getConversationDetails",
+              "name": "getConversationDetails",
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "Button1",
+          "Canvas1",
+          "Canvas2",
+          "Container1",
+          "Container2",
+          "FilePicker1",
+          "Image1",
+          "MainContainer",
+          "Table1",
+          "Text1",
+          "Text10",
+          "Text11",
+          "Text12",
+          "Text13",
+          "Text14",
+          "Text15",
+          "Text2",
+          "Text4",
+          "Text7",
+          "addConv"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Conversations",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "621dc6ea445a8d746a062790_621dc6ea445a8d746a062795"
+}
